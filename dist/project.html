@@ -19,10 +19,19 @@
             </ul>
         </div>
         <div class="bg-blue-600 cursor-pointer text-white font-mono p-2 rounded-xl md:block hidden hover:bg-white hover:border-2 hover:border-gray-300 hover:text-blue-700" >Login/SignUp</div>
-        <div class="md:hidden" >
-            <a href="">&#8801</a>
+        <div class="md:hidden ">
+            <button href="" onclick="displayMenubar()" id="menubutton"  >&#8801</button>
         </div>
     </nav>
+    <div class=" bg-gray-600 h-1 w-full"></div>
+    <div class="hidden" id="menubar">
+        <div class="md:hidden flex flex-col items-center py-8 bg-indigo-100 text-fuchsia-950 text-lg font-mono">
+            <div class="cursor-pointer hover:text-green-600">Home</div>
+            <div class="cursor-pointer hover:text-green-600">About</div>
+            <div class="cursor-pointer hover:text-green-600">Contact Us</div>
+            <div class="bg-blue-600 cursor-pointer text-white font-mono p-2 rounded-xl hover:bg-white hover:border-2 hover:border-gray-300 hover:text-blue-700" >Login/SignUp</div>
+        </div>
+    </div>
     <!-- navbar ends here  -->
 
      <!-- Image section -->
@@ -126,4 +135,16 @@
         </div>
     </footer>
 </body>
+<script>
+    let flag = false;
+    function displayMenubar(){
+        if(flag){
+            document.getElementById("menubar").classList.add("hidden");
+            flag = !flag;
+        }else{
+            document.getElementById("menubar").classList.remove("hidden");
+            flag = !flag;
+        }
+    }
+</script>
 </html>
