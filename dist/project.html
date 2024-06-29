@@ -24,7 +24,7 @@
         </div>
     </nav>
     <div class=" bg-gray-600 h-1 w-full"></div>
-    <div class="md:hidden w-full" id="menubar">
+    <div class="top-[-100%] duration-500 absolute w-full" id="menubar">
         <div class="md:min-w-min flex left-0 flex-col items-center py-8 bg-indigo-100 text-fuchsia-950 text-lg font-mono">
             <div class="cursor-pointer hover:text-green-500">Home</div>
             <div class="cursor-pointer hover:text-green-500">About</div>
@@ -138,13 +138,14 @@
 <script>
     let flag = false;
     function displayMenubar(){
-        if(flag){
-            document.getElementById("menubar").classList.add("hidden");
-            flag = !flag;
-        }else{
-            document.getElementById("menubar").classList.remove("hidden");
-            flag = !flag;
-        }
+        document.getElementById("menubar").classList.toggle("top-[9%]")
+        // if(flag){
+        //     document.getElementById("menubar").classList.add("hidden");
+        //     flag = !flag;
+        // }else{
+        //     document.getElementById("menubar").classList.remove("hidden");
+        //     flag = !flag;
+        // }
     }
 </script>
 </html>
